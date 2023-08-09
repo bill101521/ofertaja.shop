@@ -24,7 +24,7 @@
         }
         button {
             display: block;
-            margin: 20px auto;
+            margin: 20px auto 0;
             padding: 10px 20px;
             font-size: 18px;
             background-color: #FF2D55;
@@ -33,50 +33,69 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        #conteudo {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Anúncio Conforme Políticas do TikTok Ads</h1>
-        <p>Apresentando nosso produto / serviço em conformidade com todas as políticas do TikTok Ads.</p>
-
-        <!-- Informações de Contato -->
-        <h2>Informações de Contato</h2>
-        <p>Número de telefone: (XX) XXXX-XXXX</p>
-        <p>Endereço de e-mail: contato@exemplo.com</p>
-        <p>Número de fax (opcional): (XX) XXXX-XXXX</p>
-
-        <!-- Informações da Empresa -->
-        <h2>Empresa</h2>
-        <p>Nome da Empresa: Sua Empresa Inc.</p>
-        <p>Endereço da Empresa: Rua Exemplo, 123 - Cidade, Estado - CEP: XXXXX-XXX</p>
-        <p>Licença da Empresa: XXXX-XXXX-XXXX-XXXX</p>
-
-        <!-- Preço em Moeda Local -->
-        <h2>Preço</h2>
-        <p>Preço: R$ 100,00</p>
-
-        <!-- Termos e Condições, Informações de Remessa -->
-        <h2>Termos e Condições</h2>
-        <p>Leia nossos <a href="termos.html">Termos e Condições</a>.</p>
-
-        <h2>Informações de Remessa</h2>
-        <p>Detalhes sobre remessa podem ser encontrados <a href="remessa.html">aqui</a>.</p>
-
-        <!-- Políticas -->
-        <h2>Políticas</h2>
-        <p>Consulte nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
-        <p>Leia nossa <a href="retorno.html">Política de Retorno</a>.</p>
-        <p>Detalhes sobre reembolso estão disponíveis em <a href="reembolso.html">Reembolso</a>.</p>
-
         <!-- Botão de Redirecionamento -->
         <button onclick="redirecionar()">Clique aqui para saber mais</button>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function redirecionar() {
             window.location.href = 'https://meuip.com.br/'; // Substitua pelo URL da página de destino real
         }
     </script>
+    <style>
+    .conteudo-item {
+        margin-bottom: 10px; /* Espaço abaixo do elemento */
+    }
+</style>
+        <button onclick="mostrarConteudo()">Clique aqui para saber mais</button>
+        <div id="conteudo">
+            <!-- Informações de Contato -->
+            <h2>Informações de Contato</h2>
+            <p>Número de telefone: (XX) XXXX-XXXX</p>
+            <p>Endereço de e-mail: contato@exemplo.com</p>
+            <p>Número de fax (opcional): (XX) XXXX-XXXX</p>
+
+            <!-- Informações da Empresa -->
+            <h2>Empresa</h2>
+            <p>Nome da Empresa: Sua Empresa Inc.</p>
+            <p>Endereço da Empresa: Rua Exemplo, 123 - Cidade, Estado - CEP: XXXXX-XXX</p>
+            <p>Licença da Empresa: XXXX-XXXX-XXXX-XXXX</p>
+
+            <!-- Preço em Moeda Local -->
+            <h2>Preço</h2>
+            <p>Preço: R$ 100,00</p>
+
+            <!-- Termos e Condições, Informações de Remessa -->
+            <h2>Termos e Condições</h2>
+            <p>Leia nossos <a href="termos.html">Termos e Condições</a>.</p>
+
+            <h2>Informações de Remessa</h2>
+            <p>Detalhes sobre remessa podem ser encontrados <a href="remessa.html">aqui</a>.</p>
+
+            <!-- Políticas -->
+            <h2>Políticas</h2>
+            <p>Consulte nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+            <p>Leia nossa <a href="retorno.html">Política de Retorno</a>.</p>
+            <p>Detalhes sobre reembolso estão disponíveis em <a href="reembolso.html">Reembolso</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarConteudo() {
+            var conteudoDiv = document.getElementById("conteudo");
+            setTimeout(function() {
+                conteudoDiv.style.display = "block";
+            }, 2000); // Altere o valor '2000' para o tempo de atraso desejado em milissegundos
+        }
+    </script>
 </body>
 </html>
+
