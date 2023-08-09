@@ -33,6 +33,9 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .conteudo-escondido {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -41,7 +44,9 @@
         
         <!-- Botão de Redirecionamento -->
         <button onclick="redirecionar()">Clique aqui para redirecionar</button>
+    </div>
 
+    <div class="container conteudo-escondido" id="conteudo">
         <!-- Informações de Contato -->
         <h2>Informações de Contato</h2>
         <p>Número de telefone: (XX) XXXX-XXXX</p>
@@ -74,13 +79,13 @@
 
     <script>
         function redirecionar() {
-            window.location.href = 'https://meuip.com.br/'; // Substitua pelo URL da outra página real
+            window.location.href = 'outra_pagina.html'; // Substitua pelo URL da outra página real
         }
 
         // Atraso automático abaixo do botão após 5 segundos (5000 milissegundos)
         setTimeout(function() {
-            document.querySelector('.container').style.display = 'block';
-        }, 9000);
+            document.getElementById('conteudo').style.display = 'block';
+        }, 5000);
     </script>
 </body>
 </html>
